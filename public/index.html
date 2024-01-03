@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.socket.io/4.7.2/socket.io.min.js"
+      integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h1>Live Chat</h1>
+      </div>
+      <div class="chat-messages">
+        <!-- More chat messages... -->
+      </div>
+      <div class="typing-animation">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="msg" placeholder="Type your message..." />
+        <button id="send">Send</button>
+      </div>
+    </div>
+    <!-- Modal for getting the user's name -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <!-- <span class="close">&times;</span> -->
+        <p id="p">Please enter your name:</p>
+        <input type="text" id="userNameInput" />
+        <button id="saveUserName">Save</button>
+      </div>
+    </div>
+    <div id="alert" style="display: block"></div>
+  </body>
+</html>
