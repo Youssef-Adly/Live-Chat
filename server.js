@@ -11,16 +11,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + "/public"));
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 10000;
 //#endregion
 
 //#region Run Server
 const expressServer = app.listen(PORT, () => {
-  console.log(`Server Is Listening On http://localhost:${PORT}`);
+  console.log(`Server Is Listening On https://live-chat-ju5a.onrender.com`);
 });
 const io = socketServer(expressServer, {
   cors: {
-    origin: "http://127.0.0.1:5500",
+    origin: 'https://live-chat-ju5a.onrender.com',
   },
 });
 //#endregion
