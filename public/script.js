@@ -3,7 +3,7 @@ let send = document.getElementById("send");
 let container = document.getElementsByClassName("chat-messages")[0];
 let dots = document.getElementsByClassName("typing-animation")[0];
 
-var io = io("http://localhost:9000");
+var io = io("https://live-chat-ju5a.onrender.com");
 
 let user = "";
 
