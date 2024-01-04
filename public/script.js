@@ -10,7 +10,7 @@ let user = "";
 function fun(evt) {
   if (msgInput.value.trim() !== "") {
     if (evt.key === "Enter") {
-      let msg = evt.path[0].value;
+      let msg = msgInput.value;
       io.emit("msg", { msg, username: user });
       msgInput.value = "";
       io.emit("stopedTyping");
